@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Event Registration Website </title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div onclick="showBlocc('homeDiv')"> Home </div>
+            <div onclick="showBlocc('registerDiv')"> Register </div>
+            <div onclick="showBlocc('registrationDiv')"> Registrations </div>
+        </nav>
+        
+        <br>
+
+        <div id="homeDiv" style="display: block">
+            <h1> </h1>Welcome to MEME-LOL.COM! </h1>
+            <br> <br>
+            <img src="homepageMeme.png">
+            <br> <br>
+            We are having a meme competition.
+            To participate, click on the "Register" button on top.  
+        </div>
+
+        <div id="registerDiv" style="display: none">
+            <form id="registerForm"> <p>* Required fields</p>
+                <input type="text" id="name" style="color: black" placeholder="*Name"    /> 
+                <input type="text" id="eid"  style="color: black" placeholder="*Email id"/> <br> <br>
+                
+                <label> *Gender: <span class="required"> </span> </label> <br>
+                    <input type="radio" id="male" name="gender" value="Male"> 
+                    <label for="male"> Male&nbsp; </label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female"> Female&nbsp; </label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other"> Other </label>
+                    
+                    <br> <br>
+                
+                <input type="text" id="cno" style="color: black" placeholder="*Contact Number"/>              
+                
+                <input style="color: black" type="text" name="iid" id="iid" placeholder="Instagram id"/> <br><br>               
+              
+                <label> *Meme Style: </label>
+                <select name="field4" class="field-select" name="category" id="category" style="color: black">
+                  <option value="Vintage">Vintage</option>
+                  <option value="Dank">Dank</option>
+                  <option value="Wholesome">Wholesome</option>
+                  <option value="Roast">Roast</option>
+                </select>
+                              
+                <label> *Meme Link : </label> 
+                <!-- <textarea name="field5" id="memeLink" class="field-long field-textarea" style="color: black"></textarea> <br><br> -->
+                <input style="color: black" type="text" name="memeLink" id="memeLink" placeholder="Link"/> <br><br>               
+                
+                <button class="btn btn-light" type="button" onclick="addRegistration();" style="color: black">Submit </button> <br>
+            </form>
+        </div>
+
+        <div id="registrationDiv" style="display: none"> Registrations 
+            <table id="table">
+                <tr>
+                  <th>Filled on</th>
+                  <th>Name</th>
+                  <th>Email id</th>
+                  <th>Gender</th>
+                  <th>Contact No.</th>
+                  <th>Instagram id</th>
+                  <th>Category</th>
+                  <th>Meme</th>
+                </tr>          
+            </table>
+        </div>
+        
+    </body>
+</html>
