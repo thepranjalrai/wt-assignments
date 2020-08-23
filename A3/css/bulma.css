@@ -257,6 +257,10 @@ h6 {
   padding: 0;
 }
 
+* {
+  background-color: darkseagreen;
+}
+
 h1,
 h2,
 h3,
